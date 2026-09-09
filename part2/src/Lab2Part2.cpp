@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <cstdlib>
 #include "GPIO.h"
+#include <iostream>
 #include <unistd.h>
 #include <sys/mman.h>
 
@@ -28,6 +29,8 @@ using namespace std;
  */
 int main(int argc, char* argv[])
 {
+	cout << "Zane Jacobi & Marco Nororis";
+
 	// Check to determine if the command line usage is correct or not.
 	if (argc != 4)
 	{
