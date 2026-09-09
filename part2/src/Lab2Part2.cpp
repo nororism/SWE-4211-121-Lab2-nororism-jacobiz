@@ -29,14 +29,14 @@ using namespace std;
  */
 int main(int argc, char* argv[])
 {
-	cout << "Zane Jacobi & Marco Nororis";
-
 	// Check to determine if the command line usage is correct or not.
 	if (argc != 4)
 	{
 		cerr << "Usage: " << argv[0] << " <GPIO PIN> <Flashes Per Second> <Time To Flash>";
 		exit(-1);
 	}
+
+	cout << "Zane Jacobi & Marco Nororis\n\n";
 
 	// Determine the period and the blink count.
 	int GPIOPin = atoi(argv[1]);
