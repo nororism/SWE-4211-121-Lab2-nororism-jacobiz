@@ -1,6 +1,6 @@
 /**
  * @file
- * @author  <Place your name here>
+ * @author  Zane Jacobi & Marco Nororis
  * @version 2.0
   * @section DESCRIPTION
  *
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 		exit(-1);
 	}
 	// Print out your name and your lab partners name to the console at the start of the program.
-	// TODO
+	cout << "Zane Jacobi & Marco Nororis\n\n";
 
 
 	// Setup the operating thread to be a real time thread.
@@ -50,29 +50,28 @@ int main(int argc, char *argv[]) {
 	int sleepPeriodinms = atoi(argv[3]);
 
 	// Instantiate a new instance of a GPIO port to act as a GPIO output port.
-	// TODO
+	GPIO& outGPIO = GPIO::getInstance(gpioOutPin, GPIO::GPIO_OUT);
 
 	// Instantiate a new instance of a GPIO port to act as a GPIO input port.
-	// TODO
+	GPIO& inGPIO = GPIO::getInstance(gpioInPin, GPIO::GPIO_IN);
 
 
 	// Loop forever.  (Well, until the Ctrl-C is pressed.)
 	while (1 == 1) {
 		// Read the input pin.  If the pin is low,
-		// TODO
-
+		if (inGPIO.getValue() == GPIO::GPIO_LOW) {
 			// then turn the light on.
-		// TODO
-		// else
-		// TODO
+			outGPIO.setValue(GPIO::GPIO_LOW);
+		} else { // else
 			// else if the pin is not low, Turn the light off.
-		// TODO
+			outGPIO.setValue(GPIO::GPIO_HIGH);
+		}
 
 		// If the sleep time is not zero, go to sleep for the appropriate amount of time.
 		if (sleepPeriodinms!=0)
 		{
 			// Cause the thread to sleep for a given period of time.
-			// TODO
+			usleep(sleepPeriodinms * 1000);
 		}
 	}
 }
