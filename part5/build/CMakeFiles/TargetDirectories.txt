@@ -1,0 +1,3 @@
+/home/swestudent/temp/SWE-4211-121-Lab2-nororism-jacobiz/part5/build/CMakeFiles/lab2part5.dir
+/home/swestudent/temp/SWE-4211-121-Lab2-nororism-jacobiz/part5/build/CMakeFiles/edit_cache.dir
+/home/swestudent/temp/SWE-4211-121-Lab2-nororism-jacobiz/part5/build/CMakeFiles/rebuild_cache.dir
